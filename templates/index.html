@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVM Model Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="container mt-5">
+    <h1 class="text-center">SVM Model Prediction</h1>
+    <form action="/" method="POST">
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" class="form-control" name="age" required>
+        </div>
+
+        <div class="form-group">
+            <label for="job">Job:</label>
+            <select class="form-control" name="job" required>
+                <option value="0">Job 1</option>
+                <option value="1">Job 2</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="marital">Marital Status:</label>
+            <select class="form-control" name="marital" required>
+                <option value="0">Single</option>
+                <option value="1">Married</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="education">Education:</label>
+            <select class="form-control" name="education" required>
+                <option value="0">Basic</option>
+                <option value="1">University</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="default">Default:</label>
+            <select class="form-control" name="default" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="housing">Housing:</label>
+            <select class="form-control" name="housing" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="loan">Loan:</label>
+            <select class="form-control" name="loan" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="contact">Contact:</label>
+            <select class="form-control" name="contact" required>
+                <option value="0">Cellular</option>
+                <option value="1">Telephone</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="month">Month:</label>
+            <select class="form-control" name="month" required>
+                <option value="0">Jan</option>
+                <option value="1">Feb</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="day_of_week">Day of Week:</label>
+            <select class="form-control" name="day_of_week" required>
+                <option value="0">Mon</option>
+                <option value="1">Tue</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="duration">Duration:</label>
+            <input type="number" class="form-control" name="duration" required>
+        </div>
+
+        <div class="form-group">
+            <label for="campaign">Campaign:</label>
+            <input type="number" class="form-control" name="campaign" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pdays">Pdays:</label>
+            <input type="number" class="form-control" name="pdays" required>
+        </div>
+
+        <div class="form-group">
+            <label for="previous">Previous:</label>
+            <input type="number" class="form-control" name="previous" required>
+        </div>
+
+        <div class="form-group">
+            <label for="poutcome">Poutcome:</label>
+            <input type="number" class="form-control" name="poutcome" required>
+        </div>
+
+        <div class="form-group">
+            <label for="emp_var_rate">Emp Var Rate:</label>
+            <input type="number" class="form-control" step="0.01" name="emp_var_rate" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cons_price_idx">Cons Price Index:</label>
+            <input type="number" class="form-control" step="0.01" name="cons_price_idx" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cons_conf_idx">Cons Conf Index:</label>
+            <input type="number" class="form-control" step="0.01" name="cons_conf_idx" required>
+        </div>
+
+        <div class="form-group">
+            <label for="euribor3m">Euribor3M:</label>
+            <input type="number" class="form-control" step="0.01" name="euribor3m" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nr_employed">Nr Employed:</label>
+            <input type="number" class="form-control" step="0.1" name="nr_employed" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Predict</button>
+    </form>
+
+    {% if result is not none %}
+    <h1 class="mt-4">Subscribe a term deposit: {{ result }}</h1>
+    {% endif %}
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
