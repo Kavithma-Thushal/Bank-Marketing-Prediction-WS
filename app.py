@@ -27,16 +27,16 @@ def main():
         contact = request.form["contact"]
         month = request.form["month"]
         day_of_week = request.form["day_of_week"]
-        duration = float(request.form["duration"])
-        campaign = float(request.form["campaign"])
-        pdays = float(request.form["pdays"])
-        previous = float(request.form["previous"])
         poutcome = request.form["poutcome"]
-        emp_var_rate = float(request.form["emp_var_rate"])
-        cons_price_idx = float(request.form["cons_price_idx"])
-        cons_conf_idx = float(request.form["cons_conf_idx"])
-        euribor3m = float(request.form["euribor3m"])
-        nr_employed = float(request.form["nr_employed"])
+        # duration = float(request.form["duration"])
+        # campaign = float(request.form["campaign"])
+        # pdays = float(request.form["pdays"])
+        # previous = float(request.form["previous"])
+        # emp_var_rate = float(request.form["emp_var_rate"])
+        # cons_price_idx = float(request.form["cons_price_idx"])
+        # cons_conf_idx = float(request.form["cons_conf_idx"])
+        # euribor3m = float(request.form["euribor3m"])
+        # nr_employed = float(request.form["nr_employed"])
 
         # Preprocess the categorical input data using label encoders
         job = label_encoders['job'].transform([job])[0]
@@ -52,8 +52,7 @@ def main():
 
         # Create an array for prediction input
         input_data = np.array([[age, job, marital, education, default, housing, loan, contact, month,
-                                day_of_week, duration, campaign, pdays, previous, poutcome, emp_var_rate,
-                                cons_price_idx, cons_conf_idx, euribor3m, nr_employed]])
+                                day_of_week, poutcome]])
 
         # Scale the input data using scaler
         input_data_scaled = scaler.transform(input_data)
