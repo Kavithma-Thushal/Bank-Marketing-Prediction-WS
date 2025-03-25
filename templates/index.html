@@ -15,24 +15,36 @@
         <!-- Age -->
         <div class="form-group">
             <label for="age">Age:</label>
-            <input type="number" class="form-control" name="age" required>
+            <input type="number" class="form-control" name="age" placeholder="Enter" required>
         </div>
 
         <!-- Job -->
         <div class="form-group">
             <label for="job">Job:</label>
-            <select class="form-control" name="job" required>
-                <option value="0">Job 1</option>
-                <option value="1">Job 2</option>
+            <select name="job" class="form-control">
+                <option value="" selected disabled>Select</option>
+                <option value="admin.">Admin</option>
+                <option value="student">Student</option>
+                <option value="technician">Technician</option>
+                <option value="self-employed">Self-employed</option>
+                <option value="unemployed">Unemployed</option>
+                <option value="entrepreneur">Entrepreneur</option>
+                <option value="housemaid">Housemaid</option>
+                <option value="management">Management</option>
+                <option value="retired">Retired</option>
+                <option value="services">Services</option>
+                <option value="blue-collar">Blue-collar</option>
             </select>
         </div>
 
         <!-- Marital -->
         <div class="form-group">
-            <label for="marital">Marital Status:</label>
+            <label for="marital">Marital:</label>
             <select class="form-control" name="marital" required>
-                <option value="0">Single</option>
-                <option value="1">Married</option>
+                <option value="" selected disabled>Select</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
             </select>
         </div>
 
@@ -40,8 +52,13 @@
         <div class="form-group">
             <label for="education">Education:</label>
             <select class="form-control" name="education" required>
-                <option value="0">Basic</option>
-                <option value="1">University</option>
+                <option value="" selected disabled>Select</option>
+                <option value="high.school">High School</option>
+                <option value="university.degree">University Degree</option>
+                <option value="professional.course">Professional Course</option>
+                <option value="basic.4y">Basic (4 years)</option>
+                <option value="basic.6y">Basic (6 years)</option>
+                <option value="basic.9y">Basic (9 years)</option>
             </select>
         </div>
 
@@ -49,8 +66,9 @@
         <div class="form-group">
             <label for="default">Default:</label>
             <select class="form-control" name="default" required>
-                <option value="0">No</option>
-                <option value="1">Yes</option>
+                <option value="" selected disabled>Select</option>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
             </select>
         </div>
 
@@ -58,8 +76,9 @@
         <div class="form-group">
             <label for="housing">Housing:</label>
             <select class="form-control" name="housing" required>
-                <option value="0">No</option>
-                <option value="1">Yes</option>
+                <option value="" selected disabled>Select</option>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
             </select>
         </div>
 
@@ -67,8 +86,9 @@
         <div class="form-group">
             <label for="loan">Loan:</label>
             <select class="form-control" name="loan" required>
-                <option value="0">No</option>
-                <option value="1">Yes</option>
+                <option value="" selected disabled>Select</option>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
             </select>
         </div>
 
@@ -76,8 +96,9 @@
         <div class="form-group">
             <label for="contact">Contact:</label>
             <select class="form-control" name="contact" required>
-                <option value="0">Cellular</option>
-                <option value="1">Telephone</option>
+                <option value="" selected disabled>Select</option>
+                <option value="cellular">Cellular</option>
+                <option value="telephone">Telephone</option>
             </select>
         </div>
 
@@ -85,78 +106,98 @@
         <div class="form-group">
             <label for="month">Month:</label>
             <select class="form-control" name="month" required>
-                <option value="0">Jan</option>
-                <option value="1">Feb</option>
+                <option value="" selected disabled>Select</option>
+                <option value="jan">January</option>
+                <option value="feb">February</option>
+                <option value="mar">March</option>
+                <option value="apr">April</option>
+                <option value="may">May</option>
+                <option value="jun">June</option>
+                <option value="jul">July</option>
+                <option value="aug">August</option>
+                <option value="sep">September</option>
+                <option value="oct">October</option>
+                <option value="nov">November</option>
+                <option value="dec">December</option>
             </select>
         </div>
 
-        <!-- Day of Week -->
+        <!-- Day Of Week -->
         <div class="form-group">
             <label for="day_of_week">Day of Week:</label>
             <select class="form-control" name="day_of_week" required>
-                <option value="0">Mon</option>
-                <option value="1">Tue</option>
+                <option value="" selected disabled>Select</option>
+                <option value="mon">Monday</option>
+                <option value="tue">Tuesday</option>
+                <option value="wed">Wednesday</option>
+                <option value="thu">Thursday</option>
+                <option value="fri">Friday</option>
             </select>
         </div>
 
         <!-- Duration -->
         <div class="form-group">
             <label for="duration">Duration:</label>
-            <input type="number" class="form-control" name="duration" required>
+            <input type="number" class="form-control" name="duration" placeholder="Enter" required>
         </div>
 
         <!-- Campaign -->
         <div class="form-group">
             <label for="campaign">Campaign:</label>
-            <input type="number" class="form-control" name="campaign" required>
+            <input type="number" class="form-control" name="campaign" placeholder="Enter" required>
         </div>
 
         <!-- Pdays -->
         <div class="form-group">
             <label for="pdays">Pdays:</label>
-            <input type="number" class="form-control" name="pdays" required>
+            <input type="number" class="form-control" name="pdays" placeholder="Enter" required>
         </div>
 
         <!-- Previous -->
         <div class="form-group">
             <label for="previous">Previous:</label>
-            <input type="number" class="form-control" name="previous" required>
+            <input type="number" class="form-control" name="previous" placeholder="Enter" required>
         </div>
 
         <!-- Poutcome -->
         <div class="form-group">
             <label for="poutcome">Poutcome:</label>
-            <input type="number" class="form-control" name="poutcome" required>
+            <select class="form-control" name="poutcome" required>
+                <option value="" selected disabled>Select</option>
+                <option value="failure">Failure</option>
+                <option value="success">Success</option>
+                <option value="nonexistent">Nonexistent</option>
+            </select>
         </div>
 
         <!-- Emp Var Rate -->
         <div class="form-group">
             <label for="emp_var_rate">Emp Var Rate:</label>
-            <input type="number" class="form-control" step="0.01" name="emp_var_rate" required>
+            <input type="number" class="form-control" step="0.01" name="emp_var_rate" placeholder="Enter" required>
         </div>
 
         <!-- Cons Price Index -->
         <div class="form-group">
             <label for="cons_price_idx">Cons Price Index:</label>
-            <input type="number" class="form-control" step="0.01" name="cons_price_idx" required>
+            <input type="number" class="form-control" step="0.01" name="cons_price_idx" placeholder="Enter" required>
         </div>
 
         <!-- Cons Conf Index -->
         <div class="form-group">
             <label for="cons_conf_idx">Cons Conf Index:</label>
-            <input type="number" class="form-control" step="0.01" name="cons_conf_idx" required>
+            <input type="number" class="form-control" step="0.01" name="cons_conf_idx" placeholder="Enter" required>
         </div>
 
         <!-- Euribor3M -->
         <div class="form-group">
             <label for="euribor3m">Euribor3M:</label>
-            <input type="number" class="form-control" step="0.01" name="euribor3m" required>
+            <input type="number" class="form-control" step="0.01" name="euribor3m" placeholder="Enter" required>
         </div>
 
         <!-- Nr Employed -->
         <div class="form-group">
             <label for="nr_employed">Nr Employed:</label>
-            <input type="number" class="form-control" step="0.1" name="nr_employed" required>
+            <input type="number" class="form-control" step="0.1" name="nr_employed" placeholder="Enter" required>
         </div>
 
         <button type="submit" class="btn btn-primary btn-block">Predict</button>
