@@ -1,2 +1,2 @@
 .idea
-model.pkl
+models/svm_model.pkl
