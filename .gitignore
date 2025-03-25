@@ -1,2 +1,4 @@
 .idea
+models/scaler.pkl
+models/encoder.pkl
 models/svm_model.pkl

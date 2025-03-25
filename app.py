@@ -1,10 +1,16 @@
+import warnings
 import joblib
 import numpy as np
 from flask import Flask, render_template, request
 
+# Ignore warnings
+warnings.filterwarnings("ignore")
+
 app = Flask(__name__)
 
-# Load the model
+# Load the models
+scaler = joblib.load("models/scaler.pkl")
+label_encoders = joblib.load("models/encoder.pkl")
 model = joblib.load("models/svm_model.pkl")
 
 
@@ -32,13 +38,28 @@ def main():
         euribor3m = float(request.form["euribor3m"])
         nr_employed = float(request.form["nr_employed"])
 
+        # Preprocess the categorical input data using label encoders
+        job = label_encoders['job'].transform([job])[0]
+        marital = label_encoders['marital'].transform([marital])[0]
+        education = label_encoders['education'].transform([education])[0]
+        default = label_encoders['default'].transform([default])[0]
+        housing = label_encoders['housing'].transform([housing])[0]
+        loan = label_encoders['loan'].transform([loan])[0]
+        contact = label_encoders['contact'].transform([contact])[0]
+        month = label_encoders['month'].transform([month])[0]
+        day_of_week = label_encoders['day_of_week'].transform([day_of_week])[0]
+        poutcome = label_encoders['poutcome'].transform([poutcome])[0]
+
         # Create an array for prediction input
         input_data = np.array([[age, job, marital, education, default, housing, loan, contact, month,
                                 day_of_week, duration, campaign, pdays, previous, poutcome, emp_var_rate,
                                 cons_price_idx, cons_conf_idx, euribor3m, nr_employed]])
 
+        # Scale the input data using scaler
+        input_data_scaled = scaler.transform(input_data)
+
         # Make prediction
-        prediction = model.predict(input_data)
+        prediction = model.predict(input_data_scaled)
 
         # Render result
         result = "Yes" if prediction[0] == 1 else "No"
