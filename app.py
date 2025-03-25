@@ -27,7 +27,7 @@ def main():
         contact = request.form["contact"]
         month = request.form["month"]
         day_of_week = request.form["day_of_week"]
-        poutcome = request.form["poutcome"]
+        # poutcome = request.form["poutcome"]
         # duration = float(request.form["duration"])
         # campaign = float(request.form["campaign"])
         # pdays = float(request.form["pdays"])
@@ -48,11 +48,11 @@ def main():
         contact = label_encoders['contact'].transform([contact])[0]
         month = label_encoders['month'].transform([month])[0]
         day_of_week = label_encoders['day_of_week'].transform([day_of_week])[0]
-        poutcome = label_encoders['poutcome'].transform([poutcome])[0]
+        # poutcome = label_encoders['poutcome'].transform([poutcome])[0]
 
         # Create an array for prediction input
         input_data = np.array([[age, job, marital, education, default, housing, loan, contact, month,
-                                day_of_week, poutcome]])
+                                day_of_week]])
 
         # Scale the input data using scaler
         input_data_scaled = scaler.transform(input_data)
