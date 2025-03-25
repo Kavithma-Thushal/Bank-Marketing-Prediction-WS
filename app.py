@@ -11,7 +11,7 @@ model = joblib.load("models/svm_model.pkl")
 @app.route("/", methods=["GET", "POST"])
 def main():
     if request.method == "POST":
-        age = int(request.form["age"])
+        age = float(request.form["age"])
         job = request.form["job"]
         marital = request.form["marital"]
         education = request.form["education"]
@@ -21,10 +21,10 @@ def main():
         contact = request.form["contact"]
         month = request.form["month"]
         day_of_week = request.form["day_of_week"]
-        duration = int(request.form["duration"])
-        campaign = int(request.form["campaign"])
-        pdays = int(request.form["pdays"])
-        previous = int(request.form["previous"])
+        duration = float(request.form["duration"])
+        campaign = float(request.form["campaign"])
+        pdays = float(request.form["pdays"])
+        previous = float(request.form["previous"])
         poutcome = request.form["poutcome"]
         emp_var_rate = float(request.form["emp_var_rate"])
         cons_price_idx = float(request.form["cons_price_idx"])
