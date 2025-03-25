@@ -1,6 +1,6 @@
-from flask import Flask, render_template, request
 import joblib
 import numpy as np
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -43,6 +43,7 @@ def main():
         # Render result
         result = "Yes" if prediction[0] == 1 else "No"
         return render_template("index.html", result=result)
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080, debug=True)
