@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<div class="container mt-5">
+<div class="container mt-5 mb-5" style="max-width: 600px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); padding: 40px; border-radius: 10px;">
     <h1 class="text-center">SVM Model Prediction</h1>
     <form action="/" method="POST">
 
@@ -198,7 +198,9 @@
             <input type="number" class="form-control" step="0.1" name="nr_employed" placeholder="Enter" required>
         </div>#}
 
-        <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary w-25">Predict</button>
+        </div>
     </form>
 
     {% if result is not none %}
