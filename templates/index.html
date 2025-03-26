@@ -7,130 +7,137 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
-<body>
-<div class="container mt-5 mb-5 mx-auto p-4 shadow rounded w-25">
-    <h1 class="text-center">Prediction</h1>
+<body class="d-flex justify-content-center align-items-center vh-100">
+<div class="container p-4 mx-auto shadow rounded">
+    <h1 class="text-center">Bank Marketing Prediction</h1>
     <form action="/" method="POST">
+        <div class="row">
 
-        <!-- Age -->
-        <div class="form-group">
-            <label for="age">Age</label>
-            <input type="number" class="form-control" name="age" placeholder="Enter" required>
-        </div>
+            <div class="col-6">
+                <!-- Age -->
+                <div class="form-group mt-4">
+                    <label for="age">Age</label>
+                    <input type="number" class="form-control" name="age" placeholder="Enter" required>
+                </div>
 
-        <!-- Job -->
-        <div class="form-group">
-            <label for="job">Job</label>
-            <select name="job" class="form-control">
-                <option value="" selected disabled>Select</option>
-                <option value="admin.">Admin</option>
-                <option value="student">Student</option>
-                <option value="technician">Technician</option>
-                <option value="self-employed">Self-employed</option>
-                <option value="unemployed">Unemployed</option>
-                <option value="entrepreneur">Entrepreneur</option>
-                <option value="housemaid">Housemaid</option>
-                <option value="management">Management</option>
-                <option value="retired">Retired</option>
-                <option value="services">Services</option>
-                <option value="blue-collar">Blue-collar</option>
-            </select>
-        </div>
+                <!-- Job -->
+                <div class="form-group mt-4">
+                    <label for="job">Job</label>
+                    <select name="job" class="form-control">
+                        <option value="" selected disabled>Select</option>
+                        <option value="admin.">Admin</option>
+                        <option value="student">Student</option>
+                        <option value="technician">Technician</option>
+                        <option value="self-employed">Self-employed</option>
+                        <option value="unemployed">Unemployed</option>
+                        <option value="entrepreneur">Entrepreneur</option>
+                        <option value="housemaid">Housemaid</option>
+                        <option value="management">Management</option>
+                        <option value="retired">Retired</option>
+                        <option value="services">Services</option>
+                        <option value="blue-collar">Blue-collar</option>
+                    </select>
+                </div>
 
-        <!-- Marital -->
-        <div class="form-group">
-            <label for="marital">Marital Status</label>
-            <select class="form-control" name="marital" required>
-                <option value="" selected disabled>Select</option>
-                <option value="single">Single</option>
-                <option value="married">Married</option>
-                <option value="divorced">Divorced</option>
-            </select>
-        </div>
+                <!-- Marital -->
+                <div class="form-group mt-4">
+                    <label for="marital">Marital Status</label>
+                    <select class="form-control" name="marital" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                        <option value="divorced">Divorced</option>
+                    </select>
+                </div>
 
-        <!-- Education -->
-        <div class="form-group">
-            <label for="education">Education Level</label>
-            <select class="form-control" name="education" required>
-                <option value="" selected disabled>Select</option>
-                <option value="high.school">High School</option>
-                <option value="university.degree">University Degree</option>
-                <option value="professional.course">Professional Course</option>
-                <option value="basic.4y">Basic (4 years)</option>
-                <option value="basic.6y">Basic (6 years)</option>
-                <option value="basic.9y">Basic (9 years)</option>
-            </select>
-        </div>
+                <!-- Education -->
+                <div class="form-group mt-4">
+                    <label for="education">Education Level</label>
+                    <select class="form-control" name="education" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="high.school">High School</option>
+                        <option value="university.degree">University Degree</option>
+                        <option value="professional.course">Professional Course</option>
+                        <option value="basic.4y">Basic (4 years)</option>
+                        <option value="basic.6y">Basic (6 years)</option>
+                        <option value="basic.9y">Basic (9 years)</option>
+                    </select>
+                </div>
 
-        <!-- Default -->
-        <div class="form-group">
-            <label for="default">Has Credit Default?</label>
-            <select class="form-control" name="default" required>
-                <option value="" selected disabled>Select</option>
-                <option value="no">No</option>
-                <option value="yes">Yes</option>
-            </select>
-        </div>
+                <!-- Default -->
+                <div class="form-group mt-4">
+                    <label for="default">Has Credit Default?</label>
+                    <select class="form-control" name="default" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
+            </div>
 
-        <!-- Housing -->
-        <div class="form-group">
-            <label for="housing">Has Housing Loan?</label>
-            <select class="form-control" name="housing" required>
-                <option value="" selected disabled>Select</option>
-                <option value="no">No</option>
-                <option value="yes">Yes</option>
-            </select>
-        </div>
 
-        <!-- Loan -->
-        <div class="form-group">
-            <label for="loan">Has Personal Loan?</label>
-            <select class="form-control" name="loan" required>
-                <option value="" selected disabled>Select</option>
-                <option value="no">No</option>
-                <option value="yes">Yes</option>
-            </select>
-        </div>
+            <div class="col-6">
+                <!-- Housing -->
+                <div class="form-group mt-4">
+                    <label for="housing">Has Housing Loan?</label>
+                    <select class="form-control" name="housing" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
 
-        <!-- Contact -->
-        <div class="form-group">
-            <label for="contact">Contact Type</label>
-            <select class="form-control" name="contact" required>
-                <option value="" selected disabled>Select</option>
-                <option value="cellular">Cellular</option>
-                <option value="telephone">Telephone</option>
-            </select>
-        </div>
+                <!-- Loan -->
+                <div class="form-group mt-4">
+                    <label for="loan">Has Personal Loan?</label>
+                    <select class="form-control" name="loan" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                </div>
 
-        <!-- Month -->
-        <div class="form-group">
-            <label for="month">Last Contact Month</label>
-            <select class="form-control" name="month" required>
-                <option value="" selected disabled>Select</option>
-                <option value="mar">March</option>
-                <option value="apr">April</option>
-                <option value="may">May</option>
-                <option value="jun">June</option>
-                <option value="jul">July</option>
-                <option value="aug">August</option>
-                <option value="sep">September</option>
-                <option value="oct">October</option>
-                <option value="nov">November</option>
-                <option value="dec">December</option>
-            </select>
-        </div>
+                <!-- Contact -->
+                <div class="form-group mt-4">
+                    <label for="contact">Contact Type</label>
+                    <select class="form-control" name="contact" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="cellular">Cellular</option>
+                        <option value="telephone">Telephone</option>
+                    </select>
+                </div>
 
-        <!-- Day Of Week -->
-        <div class="form-group">
-            <label for="day_of_week">Last Contact Day Of Week</label>
-            <select class="form-control" name="day_of_week" required>
-                <option value="" selected disabled>Select</option>
-                <option value="mon">Monday</option>
-                <option value="tue">Tuesday</option>
-                <option value="wed">Wednesday</option>
-                <option value="thu">Thursday</option>
-                <option value="fri">Friday</option>
-            </select>
+                <!-- Month -->
+                <div class="form-group mt-4">
+                    <label for="month">Last Contact Month</label>
+                    <select class="form-control" name="month" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="mar">March</option>
+                        <option value="apr">April</option>
+                        <option value="may">May</option>
+                        <option value="jun">June</option>
+                        <option value="jul">July</option>
+                        <option value="aug">August</option>
+                        <option value="sep">September</option>
+                        <option value="oct">October</option>
+                        <option value="nov">November</option>
+                        <option value="dec">December</option>
+                    </select>
+                </div>
+
+                <!-- Day Of Week -->
+                <div class="form-group mt-4">
+                    <label for="day_of_week">Last Contact Day Of Week</label>
+                    <select class="form-control" name="day_of_week" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="mon">Monday</option>
+                        <option value="tue">Tuesday</option>
+                        <option value="wed">Wednesday</option>
+                        <option value="thu">Thursday</option>
+                        <option value="fri">Friday</option>
+                    </select>
+                </div>
+            </div>
         </div>
 
         {#<!-- Poutcome -->
@@ -198,7 +205,7 @@
             <input type="number" class="form-control" step="0.1" name="nr_employed" placeholder="Enter" required>
         </div>#}
 
-        <div class="text-center mt-4">
+        <div class="text-center mt-3">
             <button type="submit" class="btn btn-primary w-25">Predict</button>
         </div>
     </form>
@@ -208,7 +215,7 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header d-flex justify-content-center w-100">
-                        <h3 class="modal-title text-center w-100" id="resultModalLabel">Result</h3>
+                        <h3 class="modal-title text-center w-100" id="resultModalLabel">Prediction Result</h3>
                     </div>
                     <div class="modal-body">
                         Subscribe a term deposit: <strong>{{ result }}</strong>
