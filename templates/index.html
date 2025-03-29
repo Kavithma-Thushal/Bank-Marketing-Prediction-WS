@@ -11,20 +11,19 @@
 <div class="container p-4 mx-auto shadow rounded">
     <h1 class="text-center">Bank Marketing Prediction</h1>
 
-    <!-- Select Model -->
-    <div class="position-absolute" style="top: 20px; right: 20px;">
-        <form action="/" method="POST">
-            <div class="form-group">
-                <select name="model_choice" id="model_choice" class="form-control">
-                    <option value="svm" selected>SVM</option>
-                    <option value="lr">LR</option>
-                </select>
-            </div>
-        </form>
-    </div>
-
     <form action="/" method="POST">
         <div class="row">
+
+            <!-- Select Model -->
+            <div class="position-absolute" style="top: 20px; right: 20px;">
+                <div class="form-group">
+                    <select name="model_choice" id="model_choice" class="form-control" required>
+                        <option value="" selected disabled>Select Model</option>
+                        <option value="svm">SVM</option>
+                        <option value="lr">LR</option>
+                    </select>
+                </div>
+            </div>
 
             <div class="col-6">
                 <!-- Age -->
@@ -36,7 +35,7 @@
                 <!-- Job -->
                 <div class="form-group mt-4">
                     <label for="job">Job</label>
-                    <select name="job" class="form-control">
+                    <select name="job" class="form-control" required>
                         <option value="" selected disabled>Select</option>
                         <option value="admin.">Admin</option>
                         <option value="student">Student</option>

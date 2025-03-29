@@ -51,7 +51,7 @@ def main():
             df_scaled = scaler.transform(df)
 
             # Get model choice from form
-            model_choice = request.form.get("model_choice", "svm")
+            model_choice = request.form.get("model_choice")
 
             # Make prediction with selected model
             if model_choice == "svm":
