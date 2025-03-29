@@ -1,8 +1,8 @@
-# 💰 Bank Marketing Prediction (Machine Learning) 💰
+# 💰 Bank Marketing Prediction 💰
 
-This project focuses on building a machine learning model to predict whether a client will subscribe to a term deposit
-based on various attributes in the bank marketing dataset. The model was created using a Jupyter Notebook and involves
-preprocessing the data, feature engineering, training different classification models, and evaluating their performance.
+This project focuses on building machine learning models using Support Vector Machine (SVM) and Logistic Regression (
+LR), and deploying them on AWS ECS using a CI/CD pipeline to predict whether a client will subscribe to a term deposit
+as part of the course work for GDSE66 at IJSE.
 
 ## 🛠️ Tech Stack
 
@@ -10,17 +10,28 @@ preprocessing the data, feature engineering, training different classification m
 ✅ NumPy  
 ✅ Pandas  
 ✅ Scikit-learn  
-✅ Matplotlib  
 ✅ Seaborn  
-✅ Jupyter Notebook
+✅ Matplotlib  
+✅ Jupyter Notebook  
+✅ ECR  
+✅ ECS
 
 ## 🚀 Learning Objectives
 
-✅ Understanding the basics of machine learning and classification models.  
-✅ Preprocessing data (handling missing values, encoding categorical variables, and feature scaling).  
-✅ Using Support Vector Machine (SVM) and Logistic Regression (LR) models for prediction.  
-✅ Evaluating model performance with classification metrics.  
-✅ Visualizing data distributions and model evaluation metrics.
+✅ Understanding the basics of machine learning.  
+✅ Preprocessing data (handling missing values, handling outliers, and feature scaling).  
+✅ Create models using Support Vector Machine (SVM) and Logistic Regression (LR).  
+✅ Evaluate model performance with classification metrics.
+
+## 📸 Screenshots
+
+### Model
+
+<img src="ss/model.png">
+
+### Result
+
+<img src="ss/result.png">
 
 ## 📝 Version
 
