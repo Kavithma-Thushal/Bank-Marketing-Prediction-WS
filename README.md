@@ -16,7 +16,7 @@ as part of the course work for GDSE66 at IJSE.
 ✅ ECR  
 ✅ ECS
 
-## 🚀 Learning Objectives
+## 🚀 Key Features
 
 ✅ Understanding the basics of machine learning.  
 ✅ Preprocessing data (handling missing values, handling outliers, and feature scaling).  
