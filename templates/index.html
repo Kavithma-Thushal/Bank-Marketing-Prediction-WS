@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVM Model Prediction</title>
+    <title>Bank Marketing Prediction</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body class="d-flex justify-content-center align-items-center vh-100">
 <div class="container p-4 mx-auto shadow rounded">
     <h1 class="text-center">Bank Marketing Prediction</h1>
+
+    <!-- Select Model -->
+    <div class="position-absolute" style="top: 20px; right: 20px;">
+        <form action="/" method="POST">
+            <div class="form-group">
+                <select name="model_choice" id="model_choice" class="form-control">
+                    <option value="svm" selected>SVM</option>
+                    <option value="lr">LR</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
     <form action="/" method="POST">
         <div class="row">
 

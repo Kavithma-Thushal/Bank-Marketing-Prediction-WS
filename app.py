@@ -7,7 +7,8 @@ app = Flask(__name__)
 # Load models
 scaler = joblib.load("models/scaler.pkl")
 label_encoders = joblib.load("models/encoder.pkl")
-model = joblib.load("models/svm_model.pkl")
+svm_model = joblib.load("models/svm_model.pkl")
+lr_model = joblib.load("models/lr_model.pkl")
 
 # Feature names
 feature_names = [
@@ -49,8 +50,14 @@ def main():
             # Scale numeric features
             df_scaled = scaler.transform(df)
 
-            # Make prediction
-            prediction = model.predict(df_scaled)
+            # Get model choice from form
+            model_choice = request.form.get("model_choice", "svm")
+
+            # Make prediction with selected model
+            if model_choice == "svm":
+                prediction = svm_model.predict(df_scaled)
+            elif model_choice == "lr":
+                prediction = lr_model.predict(df_scaled)
 
             # Render result
             result = "Yes" if prediction[0] == 1 else "No"
