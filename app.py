@@ -5,7 +5,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 # Load dataset
-df = pd.read_csv("dataset/bank-marketing.csv")
+df = pd.read_csv("dataset/banking.csv")
 
 # Load models
 scaler = joblib.load("models/scaler.pkl")

@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("dataset/bank-marketing.csv")
+df = pd.read_csv("dataset/banking.csv")
 
 # Clean column names
 df.columns = df.columns.str.strip()
