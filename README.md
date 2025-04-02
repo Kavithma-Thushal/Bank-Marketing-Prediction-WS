@@ -5,20 +5,20 @@ subscribe to a term deposit as part of the course work for GDSE66 at IJSE.
 
 ## 🛠️ Tech Stack
 
-✅ Python
-✅ Flask
-✅ Pandas
-✅ joblib
-✅ AWS
+✅ Python  
+✅ Flask  
+✅ Pandas  
+✅ joblib  
+✅ AWS  
 ✅ ECR  
-✅ ECS
+✅ ECS  
 
 ## 🚀 Key Features
 
-✅ Evaluate model performance with classification metrics.
-✅ Deploy models using AWS ECS with CI/CD pipeline.
-✅ Preprocess user input with label encoding and feature scaling.
-✅ Provide predictions using SVM and Logistic Regression models.
+✅ Evaluate model performance with classification metrics.  
+✅ Deploy models using AWS ECS with CI/CD pipeline.  
+✅ Preprocess user input with label encoding and feature scaling.  
+✅ Provide predictions using SVM and Logistic Regression models.  
 
 ## 📸 Screenshots
 
