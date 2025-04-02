@@ -4,9 +4,6 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# Load dataset
-df = pd.read_csv("dataset/banking.csv")
-
 # Load models
 scaler = joblib.load("models/scaler.pkl")
 label_encoders = joblib.load("models/encoder.pkl")
@@ -14,7 +11,11 @@ svm_model = joblib.load("models/svm_model.pkl")
 lr_model = joblib.load("models/lr_model.pkl")
 
 # Get feature names
-feature_names = [col for col in df.columns if col != "y"]
+feature_names = [
+    "age", "job", "marital", "education", "default", "housing", "loan", "contact", "month", "day_of_week",
+    "duration", "campaign", "pdays", "previous", "poutcome", "emp_var_rate", "cons_price_idx",
+    "cons_conf_idx", "euribor3m", "nr_employed"
+]
 
 # Define categorical columns
 categorical_columns = ["job", "marital", "education", "default", "housing", "loan",
