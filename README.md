@@ -1,4 +1,4 @@
-# 💰 Bank Marketing Prediction 💰
+# 💰 Bank Marketing Prediction - Web Services (AWS) 💰
 
 This project focuses deploying the svm and lr models in AWS ECS using a CI/CD pipeline to predict whether a client will
 subscribe to a term deposit as part of the course work for GDSE66 at IJSE.
@@ -11,14 +11,14 @@ subscribe to a term deposit as part of the course work for GDSE66 at IJSE.
 ✅ joblib  
 ✅ AWS  
 ✅ ECR  
-✅ ECS  
+✅ ECS
 
 ## 🚀 Key Features
 
 ✅ Evaluate model performance with classification metrics.  
 ✅ Deploy models using AWS ECS with CI/CD pipeline.  
 ✅ Preprocess user input with label encoding and feature scaling.  
-✅ Provide predictions using SVM and Logistic Regression models.  
+✅ Provide predictions using SVM and Logistic Regression models.
 
 ## 📸 Screenshots
 
